@@ -1,0 +1,25 @@
+[project]
+name = "artifacts-not-showing-up-in-wheel"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Tobi DEGNON", email = "tobidegnon@proton.me" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+# This should include the index.html file in the wheel but it doesn't
+# [tool.hatch.build.targets.wheel]
+# artifacts = [
+#   "src/artifacts_not_showing_up_in_wheel/public",
+# ]
+
+# this a workaround
+[tool.hatch.build]
+ignore-vcs = true
